@@ -1,0 +1,18 @@
+name : Actions demo
+on: [push]
+jobs:
+  Github-actions-demo1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker --version
+      - run: python --version
+  Github-actions-demo2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: make pyl
+  Github-actions-demo3:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker build --tag test-flask-app .
+      - name: Check out repository code
+        uses: actions/checkout@v3
