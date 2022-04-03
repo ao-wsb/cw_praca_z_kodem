@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: pylint app.py
+      - run: app.py pyl
   Github-actions-demo3:
     runs-on: ubuntu-latest
     steps:
